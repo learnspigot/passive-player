@@ -16,7 +16,7 @@ public class PassiveCommand {
 
     private final PassiveManager passiveManager;
 
-    @Command(name = "passive", aliases = "p", inGameOnly = true, description = "Toggle PvP")
+    @Command(name = "passive", aliases = {"p", "pvp"}, inGameOnly = true, description = "Toggle PvP")
     public void passiveCommand(final CommandArgs args) {
 
         val player = args.getPlayer();
@@ -41,7 +41,7 @@ public class PassiveCommand {
 
             val secondsSinceLastToggle = pvPData.secondSinceLastToggle();
 
-            if(secondsSinceLastToggle < 15) {
+            if(secondsSinceLastToggle < TOGGLE_DELAY) {
                 MessageUtil.sendMessage(player,"<red>You can not toggle PvP for another " + (15-secondsSinceLastToggle) + " seconds!");
                 return;
             }

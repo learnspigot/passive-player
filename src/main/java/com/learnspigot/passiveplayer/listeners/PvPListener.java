@@ -11,8 +11,6 @@ import org.bukkit.event.Listener;
 import org.bukkit.event.entity.EntityDamageByEntityEvent;
 import org.bukkit.event.entity.ProjectileHitEvent;
 
-import java.util.Arrays;
-
 @RequiredArgsConstructor
 public class PvPListener implements Listener {
 
@@ -30,11 +28,17 @@ public class PvPListener implements Listener {
         }
     }
 
-    private void cancelAndNotifyNoPvP(final Cancellable cancellable, final Entity suspectedOffender, final Entity... entities) {
-        if(entities.length > Arrays.stream(entities).filter(entity -> entity instanceof Player).filter(passiveManager::hasPvPEnabled).count()) {
+    private void cancelAndNotifyNoPvP(final Cancellable cancellable, final Entity suspectedOffender, final Entity target) {
+
+        if(!(target instanceof Player && suspectedOffender instanceof Player)) {
+            return;
+        }
+
+        if(passiveManager.hasPvPDisabled(suspectedOffender, target)) {
             cancellable.setCancelled(true);
             MessageUtil.sendMessage(suspectedOffender, "<color:#990000>You cannot damage this player!");
         }
+
     }
 
 }
