@@ -1,0 +1,7 @@
+name: PassivePlayer
+version: '${project.version}'
+main: com.learnspigot.passiveplayer.PassivePlayer
+api-version: 1.18
+authors: [ Creeprr ]
+description: Passivemode for LearnSpigot SMP
+website: learnspigot.com
