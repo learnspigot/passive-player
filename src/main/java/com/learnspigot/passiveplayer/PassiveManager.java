@@ -23,22 +23,9 @@ public class PassiveManager {
         return dataMap.get(uuid);
     }
 
-    public boolean hasPvPEnabled(@NotNull final UUID uuid) {
+    private boolean hasPvPEnabled(@NotNull final UUID uuid) {
         return dataMap.get(uuid).isPvpEnabled();
     }
-
-    /*
-    public boolean hasPvPEnabled(@NotNull final UUID... uuids) {
-        for(final UUID uuid : uuids) {
-            if(hasPvPEnabled(uuid)) {
-                return true;
-            }
-        }
-
-        return false;
-
-    }
-     */
 
     public boolean hasPvPDisabled(@NotNull final Entity... entities) {
         for(final Entity en : entities) {

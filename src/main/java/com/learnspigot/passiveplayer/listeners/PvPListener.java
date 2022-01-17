@@ -14,6 +14,8 @@ import org.bukkit.event.entity.ProjectileHitEvent;
 @RequiredArgsConstructor
 public class PvPListener implements Listener {
 
+    private final static String CANNOT_DAMAGE_PLAYER_MSG = "<color:#990000>You cannot damage this player!";
+
     private final PassiveManager passiveManager;
 
     @EventHandler
@@ -36,7 +38,7 @@ public class PvPListener implements Listener {
 
         if(passiveManager.hasPvPDisabled(suspectedOffender, target)) {
             cancellable.setCancelled(true);
-            MessageUtil.sendMessage(suspectedOffender, "<color:#990000>You cannot damage this player!");
+            MessageUtil.sendMessage(suspectedOffender, CANNOT_DAMAGE_PLAYER_MSG);
         }
 
     }

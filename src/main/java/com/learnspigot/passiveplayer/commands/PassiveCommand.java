@@ -14,6 +14,8 @@ public class PassiveCommand {
 
     private static final int TOGGLE_DELAY = 15;
 
+    private final static String PASSIVE_OTHERS_PERM = "learnspigot.passive.others";
+
     private final PassiveManager passiveManager;
 
     @Command(name = "passive", aliases = {"p", "pvp"}, inGameOnly = true, description = "Toggle PvP")
@@ -23,7 +25,7 @@ public class PassiveCommand {
 
         final Player target;
 
-        if(args.length() > 0 && player.hasPermission("learnspigot.passive.others")) {
+        if(args.length() > 0 && player.hasPermission(PASSIVE_OTHERS_PERM)) {
             target = Bukkit.getPlayer(args.getArgs(0));
 
             if(target == null) {

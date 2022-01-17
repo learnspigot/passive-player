@@ -16,7 +16,7 @@ public final class PassivePlayer extends JavaPlugin {
 
         val passiveManager = new PassiveManager();
 
-        for(final Player p : Bukkit.getOnlinePlayers()) {
+        for(val p : Bukkit.getOnlinePlayers()) {
             passiveManager.addUUID(p.getUniqueId());
         }
 
@@ -29,8 +29,4 @@ public final class PassivePlayer extends JavaPlugin {
 
     }
 
-    @Override
-    public void onDisable() {
-        // Plugin shutdown logic
-    }
 }
