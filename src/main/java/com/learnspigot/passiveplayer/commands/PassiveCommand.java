@@ -1,9 +1,9 @@
 package com.learnspigot.passiveplayer.commands;
 
 import com.learnspigot.passiveplayer.PassiveManager;
-import com.learnspigot.smp.utils.chat.MessageUtil;
-import com.learnspigot.smp.utils.commandframework.Command;
-import com.learnspigot.smp.utils.commandframework.CommandArgs;
+import com.learnspigot.smp.core.utils.chat.MessageUtil;
+import com.learnspigot.smp.core.utils.commandframework.Command;
+import com.learnspigot.smp.core.utils.commandframework.CommandArgs;
 import lombok.RequiredArgsConstructor;
 import lombok.val;
 import org.bukkit.Bukkit;

@@ -1,7 +1,7 @@
 package com.learnspigot.passiveplayer.listeners;
 
 import com.learnspigot.passiveplayer.PassiveManager;
-import com.learnspigot.smp.utils.chat.MessageUtil;
+import com.learnspigot.smp.core.utils.chat.MessageUtil;
 import lombok.RequiredArgsConstructor;
 import org.bukkit.entity.Entity;
 import org.bukkit.entity.Player;

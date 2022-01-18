@@ -73,8 +73,8 @@
             <scope>provided</scope>
         </dependency>
         <dependency>
-            <groupId>com.learnspigot.smp</groupId>
-            <artifactId>LearnSpigotSMP-core</artifactId>
+            <groupId>com.learnspigot.smp.core</groupId>
+            <artifactId>LearnSpigot-Core</artifactId>
             <version>1.0</version>
             <scope>provided</scope>
         </dependency>

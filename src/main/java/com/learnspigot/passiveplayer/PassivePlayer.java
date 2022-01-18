@@ -3,10 +3,9 @@ package com.learnspigot.passiveplayer;
 import com.learnspigot.passiveplayer.commands.PassiveCommand;
 import com.learnspigot.passiveplayer.listeners.JoinQuitListener;
 import com.learnspigot.passiveplayer.listeners.PvPListener;
-import com.learnspigot.smp.utils.commandframework.CommandFramework;
+import com.learnspigot.smp.core.utils.commandframework.CommandFramework;
 import lombok.val;
 import org.bukkit.Bukkit;
-import org.bukkit.entity.Player;
 import org.bukkit.plugin.java.JavaPlugin;
 
 public final class PassivePlayer extends JavaPlugin {
